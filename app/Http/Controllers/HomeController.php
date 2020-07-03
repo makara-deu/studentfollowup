@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Student;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::all();
+        $students = Student::all();
+        return view('student.followup', compact('students', 'users'));
+    
+    }
+    public function register(){
+        return redirect('register');
     }
 }

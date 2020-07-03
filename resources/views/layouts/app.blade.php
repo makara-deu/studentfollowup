@@ -15,6 +15,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- Icons --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -71,7 +75,15 @@
                 </div>
             </div>
         </nav>
-
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link " href="{{route('home')}}">Follow up student</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="{{route('returnOutFollowUpView')}}" class="nav-link" >Out Follow Up</a>
+                </li>
+              </ul>
+                <br>
         <main class="py-4">
             @yield('content')
         </main>
