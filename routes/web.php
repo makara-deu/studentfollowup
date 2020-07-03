@@ -19,3 +19,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('students', 'StudentController');
 Route::get('/returnOutFollowUpView', 'StudentController@returnOutFollowUpView')->name('returnOutFollowUpView');
+Route::resource('comments', 'CommentController');
+Route::post('/addComment/{id}', 'CommentController@addComment')->name('addComment');
+Route::get('/deleteComment/{id}', 'CommentController@deleteComment')->name('deleteComment');
