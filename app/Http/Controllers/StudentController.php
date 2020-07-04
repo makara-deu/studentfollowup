@@ -154,4 +154,19 @@ class StudentController extends Controller
         }
         return $result;
     }
+    /**
+     * out followup student
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function outfollowup($id)
+    {
+        $student = Student::find($id);
+        $student->activeFollowup = 0;
+        $student->save();
+        return redirect('/returnOutFollowUpView');
+    }
+
 }
+
