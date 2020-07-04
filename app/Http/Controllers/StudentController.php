@@ -167,6 +167,24 @@ class StudentController extends Controller
         $student->save();
         return redirect('/returnOutFollowUpView');
     }
+/**
+     * out followup student
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function followup($id)
+    {
+        if(auth::user()->role == 1){
+            $student = Student::find($id);
+            $student->activeFollowup = 1;
+            $student->save();
+            $result = redirect('/home');
+        }else{
+            $result = "Unauthorize user";
+        }
+        return $result;
+    }
+    
 
 }
 

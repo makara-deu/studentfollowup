@@ -22,7 +22,7 @@
                         <td>{{$student->lastName}}</td>
                         <td>{{$student->class}}</td>
                         <td class=" text-center">
-                            <a href="#"><i class='fas fa-user-times text-danger'></i></i></a>
+                            <a href="{{route('followup', $student->id)}}"><i class='fas fa-user-slash text-danger'></i></i></a>
                         </td>
                         @endif
                 </tr>

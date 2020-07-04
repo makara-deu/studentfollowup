@@ -23,3 +23,4 @@ Route::resource('comments', 'CommentController');
 Route::post('/addComment/{id}', 'CommentController@addComment')->name('addComment');
 Route::get('/deleteComment/{id}', 'CommentController@deleteComment')->name('deleteComment');
 Route::get('/outfollowup/{id}', 'StudentController@outfollowup')->name('outfollowup');
+Route::get('/followup/{id}', 'StudentController@followup')->name('followup');
